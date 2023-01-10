@@ -5,7 +5,7 @@ import Collapse from '@mui/material/Collapse';
 import IconButton from '@mui/material/IconButton';
 import Table from '@mui/material/Table';
 import TableBody from '@mui/material/TableBody';
-import TableCell from '@mui/material/TableCell';
+import TableCell, { tableCellClasses } from '@mui/material/TableCell';
 import TableContainer from '@mui/material/TableContainer';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
@@ -13,7 +13,7 @@ import Checkbox from '@mui/material/Checkbox';
 import Insideinsidetable from './Insideinsidetable'
 import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
-
+import './Insidetable.css';
 function createData(activity, rate, total) {
     return {
       activity,
@@ -28,7 +28,7 @@ function Row(props) {
 
     return (
         <React.Fragment>
-            <TableRow sx={{ '& > *': { borderBottom: 'unset' } }}>
+            <TableRow className="removing" sx={{ '& > *': { borderBottom: 'unset'} }}>
                 <TableCell component="th" scope="row">
                     <Checkbox />
                 </TableCell>
@@ -69,7 +69,11 @@ const rows = [
 export default function Insidetable() {
     return (
         <TableContainer component={Paper}>
-            <Table aria-label="collapsible table">
+            <Table aria-label="collapsible table" style={{borderBottom:'0px'}} sx={{
+                [`& .${tableCellClasses.root}`]: {
+                    borderBottom: "none"
+                }
+            }}>
                 <TableBody>
                     {rows.map((row) => (
                         <Row key={row.name} row={row} />
