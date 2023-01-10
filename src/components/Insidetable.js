@@ -30,15 +30,15 @@ function Row(props) {
     return (
         <React.Fragment>
             <TableRow className="mybox" sx={{ '& > *': { borderBottom: 'unset',paddingLeft:'50px' } }}>
-                <TableCell component="th" scope="row">
-                    <div style={{display:'flex',alignItems:'center'}}>
+                <TableCell component="th" scope="row" align="left">
+                    <div style={{display:'flex',alignItems:'center', width:31}}>
                         <p>⎯⎯⎯⎯⎯</p>
                         <Checkbox />
                     </div>
                 </TableCell>
-                <TableCell>{row.activity}</TableCell>
-                <TableCell align="right">{row.rate}</TableCell>
-                <TableCell align="right">{row.total}</TableCell>
+                <TableCell style={{ width: 180 }} align="left">{row.activity}</TableCell>
+                <TableCell align="left">{row.rate}</TableCell>
+                <TableCell align="left">{row.total}</TableCell>
                 <TableCell>
                     <IconButton
                         aria-label="expand row"

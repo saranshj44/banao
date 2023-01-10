@@ -20,7 +20,7 @@ function Row(props) {
     return (
         <React.Fragment style={{marginLeft:'10px'}}>
             <TableRow className='mybox' sx={{ '& > *': { borderBottom: 'unset' } }}>
-                <TableCell style={{width:100}} component="th" scope="row">
+                <TableCell style={{width:115}} component="th" scope="row">
                     <div style={{ display: 'flex', alignItems: 'center' }}>
                         <p>⎯⎯⎯⎯⎯⎯</p>
                         <Checkbox />
