@@ -1,3 +1,16 @@
 /* .MuiTableCell-root {
     border-bottom: 0px !important;
 } */
+.mybox {
+  position: relative;
+  padding: 10px 20px;
+}
+
+.mybox:after {
+  content: '';
+  position: absolute;
+  left: 0px;
+  top: 0%;
+  height: 50%;
+  border-left: 1px solid #080808;
+}

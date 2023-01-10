@@ -13,6 +13,7 @@ import Checkbox from '@mui/material/Checkbox';
 import Insideinsidetable from './Insideinsidetable'
 import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
+import HorizontalRuleIcon from '@mui/icons-material/HorizontalRule';
 import './Insidetable.css';
 function createData(activity, rate, total) {
     return {
@@ -28,9 +29,12 @@ function Row(props) {
 
     return (
         <React.Fragment>
-            <TableRow className="removing" sx={{ '& > *': { borderBottom: 'unset'} }}>
+            <TableRow className="mybox" sx={{ '& > *': { borderBottom: 'unset',paddingLeft:'50px' } }}>
                 <TableCell component="th" scope="row">
-                    <Checkbox />
+                    <div style={{display:'flex',alignItems:'center'}}>
+                        <p>⎯⎯⎯⎯⎯</p>
+                        <Checkbox />
+                    </div>
                 </TableCell>
                 <TableCell>{row.activity}</TableCell>
                 <TableCell align="right">{row.rate}</TableCell>
@@ -47,8 +51,8 @@ function Row(props) {
                     </IconButton>
                 </TableCell>
             </TableRow>
-            <TableRow>
-                <TableCell style={{ paddingBottom: 0, paddingTop: 0 }} colSpan={6}>
+            <TableRow style={{ paddingBottom: 0, paddingTop: 0, marginLeft: '50px' }}>
+                <TableCell style={{ paddingBottom: 0, paddingTop: 0 ,paddingLeft:'50px',marginLeft:'1px' ,borderLeft:'0.5px solid grey'}} colSpan={6}>
                     <Collapse in={open} timeout="auto" unmountOnExit>
                         <Box sx={{ margin: 1 }}>
                             <Insideinsidetable/>
@@ -71,7 +75,8 @@ export default function Insidetable() {
         <TableContainer >
             <Table aria-label="collapsible table" style={{borderBottom:'0px'}} sx={{
                 [`& .${tableCellClasses.root}`]: {
-                    borderBottom: "none"
+                    borderBottom: "none",
+                    padding:"0",
                 }
             }}>
                 <TableBody>

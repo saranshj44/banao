@@ -6,6 +6,7 @@ import TableContainer from '@mui/material/TableContainer';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
 import Checkbox from '@mui/material/Checkbox';
+import HorizontalRuleIcon from '@mui/icons-material/HorizontalRule';
 import './Insidetable.css';
 function createData(name, total) {
     return {
@@ -17,13 +18,16 @@ function createData(name, total) {
 function Row(props) {
     const { row } = props;
     return (
-        <React.Fragment>
-            <TableRow sx={{ '& > *': { borderBottom: 'unset' } }}>
-                <TableCell component="th" scope="row">
-                    <Checkbox />
+        <React.Fragment style={{marginLeft:'10px'}}>
+            <TableRow className='mybox' sx={{ '& > *': { borderBottom: 'unset' } }}>
+                <TableCell style={{width:100}} component="th" scope="row">
+                    <div style={{ display: 'flex', alignItems: 'center' }}>
+                        <p>⎯⎯⎯⎯⎯⎯</p>
+                        <Checkbox />
+                    </div>
                 </TableCell>
-                <TableCell align="left">{row.name}</TableCell>
-                <TableCell align="right">{row.total}</TableCell>
+                <TableCell style={{ width: 840 }} align="left">{row.name}</TableCell>
+                <TableCell style={{ width: 250 }} align="left">{row.total}</TableCell>
                 <TableCell align="right"></TableCell>
             </TableRow>
         </React.Fragment>
