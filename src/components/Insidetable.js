@@ -30,14 +30,14 @@ function Row(props) {
     return (
         <React.Fragment>
             <TableRow className="mybox" sx={{ '& > *': { borderBottom: 'unset',paddingLeft:'50px' } }}>
-                <TableCell component="th" scope="row" align="left">
+                <TableCell component="th" scope="row" align="left" style={{width:115}}>
                     <div style={{display:'flex',alignItems:'center', width:31}}>
                         <p>⎯⎯⎯⎯⎯</p>
                         <Checkbox />
                     </div>
                 </TableCell>
-                <TableCell style={{ width: 180 }} align="left">{row.activity}</TableCell>
-                <TableCell align="left">{row.rate}</TableCell>
+                <TableCell style={{ width: 270 }} align="left">{row.activity}</TableCell>
+                <TableCell align="left" style={{ width: 306 }}>{row.rate}</TableCell>
                 <TableCell align="left">{row.total}</TableCell>
                 <TableCell>
                     <IconButton
@@ -52,7 +52,7 @@ function Row(props) {
                 </TableCell>
             </TableRow>
             <TableRow style={{ paddingBottom: 0, paddingTop: 0, marginLeft: '50px' }}>
-                <TableCell style={{ paddingBottom: 0, paddingTop: 0 ,paddingLeft:'50px',marginLeft:'1px' ,borderLeft:'0.5px solid grey'}} colSpan={6}>
+                <TableCell style={{ paddingBottom: 0, paddingTop: 0 ,paddingLeft:'51px',marginLeft:'1px' ,borderLeft:'0.7px solid black'}} colSpan={6}>
                     <Collapse in={open} timeout="auto" unmountOnExit>
                         <Box sx={{ margin: 1 }}>
                             <Insideinsidetable/>

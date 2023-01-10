@@ -31,13 +31,13 @@ function Row(props) {
     return (
         <React.Fragment>
             <TableRow sx={{ '& > *': { borderBottom: 'unset' } }}>
-                <TableCell component="th" scope="row">
+                <TableCell component="th" scope="row" style={{width:20}}>
                     <Checkbox />
                 </TableCell>
                 {/* <TableCell align="right">{row.calories}</TableCell> */}
-                <TableCell>{row.Packages}</TableCell>
-                <TableCell align="right">{row.Rate}</TableCell>
-                <TableCell align="right">{row.Total}</TableCell>
+                <TableCell style={{ width: 300 }} align="left">{row.Packages}</TableCell>
+                <TableCell align="left">{row.Rate}</TableCell>
+                <TableCell align="left">{row.Total}</TableCell>
                 <TableCell>
                     <IconButton
                         aria-label="expand row"
@@ -77,10 +77,10 @@ export default function CollapsibleTable() {
             <Table aria-label="collapsible table">
                 <TableHead>
                     <TableRow>
-                        <TableCell style={{marginRight:'0px!important'}}><Checkbox/></TableCell>
-                        <TableCell>Packages&nbsp;</TableCell>
-                        <TableCell align="right">Rate&nbsp;(in sqft)</TableCell>
-                        <TableCell align="right">Total&nbsp;</TableCell> 
+                        <TableCell style={{marginRight:'0px!important',width:20}}><Checkbox/></TableCell>
+                        <TableCell style={{width:300}} align="left">Packages&nbsp;</TableCell>
+                        <TableCell align="left">Rate&nbsp;(in sqft)</TableCell>
+                        <TableCell align="left">Total&nbsp;</TableCell> 
                         <TableCell />
                     </TableRow>
                 </TableHead>

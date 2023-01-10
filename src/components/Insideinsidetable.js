@@ -26,7 +26,7 @@ function Row(props) {
                         <Checkbox />
                     </div>
                 </TableCell>
-                <TableCell style={{ width: 840 }} align="left">{row.name}</TableCell>
+                <TableCell style={{ width: 517 }} align="left">{row.name}</TableCell>
                 <TableCell style={{ width: 250 }} align="left">{row.total}</TableCell>
                 <TableCell align="right"></TableCell>
             </TableRow>
