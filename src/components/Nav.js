@@ -8,9 +8,7 @@ import Button from '@mui/material/Button';
 import IconButton from '@mui/material/IconButton';
 import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
 import TemporaryDrawer from './TemporaryDrawer';
-// let savedet=function saving(){
-    
-// }
+
 export default function Nav() {
     const [save, setSave] = useState(false);
     return (

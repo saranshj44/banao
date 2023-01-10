@@ -7,34 +7,18 @@ import Table from '@mui/material/Table';
 import TableBody from '@mui/material/TableBody';
 import TableCell from '@mui/material/TableCell';
 import TableContainer from '@mui/material/TableContainer';
-import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
-import Typography from '@mui/material/Typography';
 import Paper from '@mui/material/Paper';
-import KeyboardArrowDownIcon from '@mui/icons-material/ArrowBack';
-import KeyboardArrowUpIcon from '@mui/icons-material/ArrowBack';
 import Checkbox from '@mui/material/Checkbox';
 import Insideinsidetable from './Insideinsidetable'
-function createData(name, calories, fat, carbs, protein, price) {
+import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
+import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
+
+function createData(activity, rate, total) {
     return {
-        name,
-        calories,
-        fat,
-        carbs,
-        protein,
-        price,
-        history: [
-            {
-                date: '2020-01-05',
-                customerId: '11091700',
-                amount: 3,
-            },
-            {
-                date: '2020-01-02',
-                customerId: 'Anonymous',
-                amount: 1,
-            },
-        ],
+      activity,
+      rate,
+      total
     };
 }
 
@@ -45,22 +29,12 @@ function Row(props) {
     return (
         <React.Fragment>
             <TableRow sx={{ '& > *': { borderBottom: 'unset' } }}>
-                {/* <TableCell>
-                    <IconButton
-                        aria-label="expand row"
-                        size="small"
-                        onClick={() => setOpen(!open)}
-                    >
-                        {open ? <KeyboardArrowUpIcon /> : <KeyboardArrowDownIcon />}
-                    </IconButton>
-                </TableCell> */}
                 <TableCell component="th" scope="row">
                     <Checkbox />
                 </TableCell>
-                {/* <TableCell align="right">{row.calories}</TableCell> */}
-                <TableCell>{row.fat}</TableCell>
-                <TableCell align="right">{row.carbs}</TableCell>
-                <TableCell align="right">{row.protein}</TableCell>
+                <TableCell>{row.activity}</TableCell>
+                <TableCell align="right">{row.rate}</TableCell>
+                <TableCell align="right">{row.total}</TableCell>
                 <TableCell>
                     <IconButton
                         aria-label="expand row"
@@ -85,29 +59,11 @@ function Row(props) {
         </React.Fragment>
     );
 }
-
-Row.propTypes = {
-    row: PropTypes.shape({
-        calories: PropTypes.number.isRequired,
-        carbs: PropTypes.number.isRequired,
-        fat: PropTypes.number.isRequired,
-        history: PropTypes.arrayOf(
-            PropTypes.shape({
-                amount: PropTypes.number.isRequired,
-                customerId: PropTypes.string.isRequired,
-                date: PropTypes.string.isRequired,
-            }),
-        ).isRequired,
-        name: PropTypes.string.isRequired,
-        price: PropTypes.number.isRequired,
-        protein: PropTypes.number.isRequired,
-    }).isRequired,
-};
-
 const rows = [
-    createData('Frozen yoghurt', 159, 6.0, 24, 4.0, 3.99),
-    createData('Ice cream sandwich', 237, 9.0, 37, 4.3, 4.99),
-    createData('Eclair', 262, 16.0, 24, 6.0, 3.79),
+    createData('Activity 1', 567.80, '₹ 2986792'),
+    createData('Activity 2', 567.80, '₹ 2986792'),
+    createData('Activity 3', 567.80, '₹ 2986792'),
+    createData('Activity 4', 567.80, '₹ 2986792'),
 ];
 
 export default function Insidetable() {
