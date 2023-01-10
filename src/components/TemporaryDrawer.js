@@ -11,12 +11,12 @@ import ListItemText from '@mui/material/ListItemText';
 import InboxIcon from '@mui/icons-material/MoveToInbox';
 import MailIcon from '@mui/icons-material/Mail';
 
-export default function TemporaryDrawer() {
+export default function TemporaryDrawer(savedata) {
     const [state, setState] = React.useState({
         // top: false,
         // left: false,
         // bottom: false,
-        right: true,
+        right: false,
     });
 
     const toggleDrawer = (anchor, open) => (event) => {
@@ -29,7 +29,7 @@ export default function TemporaryDrawer() {
 
     const list = (anchor) => (
         <Box
-            sx={{ width:250 }}
+            sx={{ width:400 }}
             role="presentation"
             onClick={toggleDrawer(anchor, false)}
             onKeyDown={toggleDrawer(anchor, false)}
@@ -66,7 +66,7 @@ export default function TemporaryDrawer() {
         <div>
             
         <React.Fragment key={'right'}>
-            <Button onClick={toggleDrawer('right', true)}></Button>
+            <Button variant="contained" size="large" onClick={toggleDrawer('right', true)}>Save</Button>
             <Drawer
                 anchor={'right'}
                 open={state['right']}

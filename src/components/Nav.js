@@ -29,10 +29,7 @@ export default function Nav() {
                     <Typography style={{color:'black'}} variant="h6" component="div" sx={{ flexGrow: 1 }}>
                         Create WorkOrder
                     </Typography>
-                    <Button variant="contained" size="large" onClick={() => setSave(true)}>
-                        Save
-                    </Button>
-                    {save===true ? <TemporaryDrawer />:<></>}
+                    <TemporaryDrawer/>
                 </Toolbar>
             </AppBar>
         </Box>

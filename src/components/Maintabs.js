@@ -4,7 +4,6 @@ import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
-import DataTable from './Datatable';
 import CollapsibleTable from './CollapsibleTable';
 
 function TabPanel(props) {
