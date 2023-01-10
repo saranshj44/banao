@@ -68,7 +68,7 @@ const rows = [
 
 export default function Insidetable() {
     return (
-        <TableContainer component={Paper}>
+        <TableContainer >
             <Table aria-label="collapsible table" style={{borderBottom:'0px'}} sx={{
                 [`& .${tableCellClasses.root}`]: {
                     borderBottom: "none"

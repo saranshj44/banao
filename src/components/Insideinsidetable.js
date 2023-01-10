@@ -40,7 +40,7 @@ const rows = [
 
 export default function Insidetable() {
     return (
-        <TableContainer component={Paper}>
+        <TableContainer>
             <Table aria-label="collapsible table">
                 <TableBody>
                     {rows.map((row) => (
