@@ -24,7 +24,7 @@ export default function Nav() {
                     >
                         <ArrowBackIosIcon />
                     </IconButton>
-                    <Typography style={{color:'black'}} variant="h6" component="div" sx={{ flexGrow: 1 }}>
+                    <Typography style={{color:'black',fontWeight:'800'}} variant="h6" component="div" sx={{ flexGrow: 1 }}>
                         Create WorkOrder
                     </Typography>
                     <TemporaryDrawer/>

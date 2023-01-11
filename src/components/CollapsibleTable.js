@@ -10,8 +10,6 @@ import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
-import KeyboardArrowDownIcon from '@mui/icons-material/ArrowBack';
-import KeyboardArrowUpIcon from '@mui/icons-material/ArrowBack';
 import Checkbox from '@mui/material/Checkbox';
 import Insidetable from './Insidetable';
 import AddIcon from '@mui/icons-material/Add';
@@ -34,7 +32,6 @@ function Row(props) {
                 <TableCell component="th" scope="row" style={{width:20}}>
                     <Checkbox />
                 </TableCell>
-                {/* <TableCell align="right">{row.calories}</TableCell> */}
                 <TableCell style={{ width: 300 }} align="left">{row.Packages}</TableCell>
                 <TableCell align="left">{row.Rate}</TableCell>
                 <TableCell align="left">{row.Total}</TableCell>

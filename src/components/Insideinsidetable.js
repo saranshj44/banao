@@ -4,9 +4,7 @@ import TableBody from '@mui/material/TableBody';
 import TableCell from '@mui/material/TableCell';
 import TableContainer from '@mui/material/TableContainer';
 import TableRow from '@mui/material/TableRow';
-import Paper from '@mui/material/Paper';
 import Checkbox from '@mui/material/Checkbox';
-import HorizontalRuleIcon from '@mui/icons-material/HorizontalRule';
 import './Insidetable.css';
 function createData(name, total) {
     return {
